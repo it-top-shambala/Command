@@ -26,8 +26,8 @@ Command* CommandParser(string str) {
         command->operation = operation;
         str = str.substr(position + 1);
         position = str.find(' ');
-        command->number_1 = stod(str.substr(0, position)); //TODO добавить валидациюсдробных чисел (перехват исключения)
-        command->number_2 = stod(str.substr(position + 1)); //TODO добавить валидациюсдробных чисел (перехват исключения)
+        command->number_1 = stod(str.substr(0, position)); //TODO добавить валидацию дробных чисел (перехват исключения)
+        command->number_2 = stod(str.substr(position + 1)); //TODO добавить валидацию дробных чисел (перехват исключения)
         return command;
     }
     return nullptr; // Возврат пустого(null) значения

@@ -27,22 +27,4 @@ struct Command {
             result = number_1 / number_2;
         }
     }
-
-    string OperationToString() {
-        if (operation == ADD) {
-            return "+";
-        } else if (operation == SUB) {
-            return "-";
-        } else if (operation == MUL) {
-            return "*";
-        } else if (operation == DIV) {
-            return "/";
-        }
-    }
-
-    string ToString() {
-        if (operation == LOG_RESULTS) return "";
-
-        return to_string(number_1) + " " + OperationToString() + " " + to_string(number_2) + " = " + to_string(result);
-    }
 };

@@ -3,4 +3,4 @@ project(untitled3)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(untitled3 main.cpp Command.h CommandParser.h)
+add_executable(untitled3 main.cpp Command.h CommandParser.h FileHelper.h ConsoleHelper.h)
