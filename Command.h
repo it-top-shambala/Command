@@ -15,6 +15,7 @@ struct Command {
     double number_1;
     double number_2;
     double result;
+    bool isError = false;
 
     void Execute() {
         if (operation == ADD) {
@@ -24,6 +25,10 @@ struct Command {
         } else if (operation == MUL) {
             result = number_1 * number_2;
         } else if (operation == DIV) {
+            if (number_2 == 0) {
+                isError = true;
+                return;
+            }
             result = number_1 / number_2;
         }
     }

@@ -23,6 +23,12 @@ string OperationToString(string operation) {
 void PrintCommand(Command* command) {
     if (command->operation == command->LOG_RESULTS) return;
 
-    string message = to_string(command->number_1) + " " + OperationToString(command->operation) + " " + to_string(command->number_2) + " = " + to_string(command->result);
+    string message;
+    if (command->isError) {
+        message = "Error";
+    } else {
+        message = to_string(command->number_1) + " " + OperationToString(command->operation) + " " + to_string(command->number_2) + " = " + to_string(command->result);
+    }
+
     cout << message << endl;
 }
